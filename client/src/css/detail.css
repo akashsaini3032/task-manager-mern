@@ -293,3 +293,76 @@
     opacity: 1;
   }
 }
+
+
+
+
+
+@media (max-width: 768px) {
+  .task-detail-wrapper {
+    padding: 10px;
+  }
+
+  .task-detail-wrapper .d-flex {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .task-detail-wrapper .input-group,
+  .task-detail-wrapper .dropdown {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .task-detail-wrapper table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
+
+  .task-detail-wrapper table thead,
+  .task-detail-wrapper table tbody,
+  .task-detail-wrapper table th,
+  .task-detail-wrapper table td,
+  .task-detail-wrapper table tr {
+    white-space: nowrap;
+  }
+
+  .task-detail-wrapper table th,
+  .task-detail-wrapper table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .task-detail-wrapper .pagination {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .task-detail-wrapper .pagination .page-item .page-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  /* Modal full width for mobile */
+  .task-detail-wrapper .modal-dialog {
+    margin: 0;
+    width: 100%;
+  }
+
+  .task-detail-wrapper .modal-content {
+    border-radius: 0;
+  }
+
+  /* Ensure button text wraps and fits */
+  .task-detail-wrapper button,
+  .task-detail-wrapper .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}

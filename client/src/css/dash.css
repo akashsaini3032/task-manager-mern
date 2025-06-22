@@ -1,11 +1,5 @@
 
 
-/* ========================================
-   ADMIN DASHBOARD – PROFESSIONAL STYLES
-   100% INDEPENDENT + MODERN UI/UX
-   Only affects elements with admin-* class
-========================================= */
-
 /* === HEADER === */
 .admin-dashboard-header {
   background: linear-gradient(to right, #e0f7fa, #fef9c3, #ffe4e6);
@@ -38,8 +32,10 @@
   background: #f1f5f9;
   border-radius: 10px;
   border: 2px solid #d1d5db;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   animation: admin-slideIn 0.4s ease;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .admin-welcome-text {
@@ -74,7 +70,8 @@
   overflow: hidden;
   background: #f8fafc;
   border: 2px solid #e2e8f0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
 }
 
 /* === SIDEBAR === */
@@ -83,6 +80,7 @@
   background: linear-gradient(to bottom, #dbeafe, #f0f9ff, #fef3c7);
   padding: 1.5rem 1rem;
   border-right: 2px solid #cbd5e1;
+  flex-shrink: 0;
 }
 
 .admin-dashboard-link {
@@ -114,6 +112,8 @@
   background: #ffffff;
   animation: admin-fadeIn 0.5s ease;
   border-left: 2px solid #cbd5e1;
+  min-width: 0;
+  overflow-x: auto;
 }
 
 /* === Animations === */
@@ -136,5 +136,173 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+/* === ASSIGN TASK COMPONENT === */
+.assigntask-wrapper {
+  background: linear-gradient(to bottom right, #f6f9fc, #edf2f7);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.6s ease-in;
+}
+
+.assigntask-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a202c;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+.assigntask-divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.assigntask-table-wrapper {
+  overflow-x: auto;
+  animation: fadeInUp 0.7s ease;
+}
+
+.assigntask-table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.assigntask-table th {
+  background-color: #2b6cb0;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.assigntask-table td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.assigntask-row:hover {
+  background: #ebf8ff;
+  transition: background 0.3s ease;
+}
+
+.assigntask-btn {
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.1);
+}
+
+.assigntask-btn:hover {
+  transform: scale(1.05);
+  background-color: #3182ce !important;
+  color: white !important;
+  box-shadow: 0 0 12px #90cdf4;
+}
+
+.assigntask-modal .modal-content {
+  border-radius: 16px;
+  animation: fadeInUp 0.6s ease-in-out;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.assigntask-form label {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.assigntask-form input {
+  border-radius: 8px !important;
+  border: 1px solid #cbd5e0 !important;
+  transition: all 0.3s ease;
+}
+
+.assigntask-form input:focus {
+  border-color: #4299e1 !important;
+  box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25) !important;
+}
+
+.assigntask-submit-btn {
+  background-color: #2b6cb0 !important;
+  border: none !important;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.assigntask-submit-btn:hover {
+  background-color: #2c5282 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE FIX === */
+@media (max-width: 768px) {
+  .admin-dashboard-wrapper {
+    flex-direction: column;
+    overflow: visible !important;
+  }
+
+  .admin-dashboard-sidebar {
+    width: 100% !important;
+    border-right: none;
+    border-bottom: 2px solid #cbd5e1;
+  }
+
+  .admin-dashboard-content {
+    border-left: none;
+    border-top: 2px solid #cbd5e1;
+    padding: 1.5rem 1rem;
+    overflow-x: auto;
+  }
+
+  .admin-dashboard-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .admin-dashboard-title {
+    font-size: 1.7rem;
+  }
+
+  .admin-welcome-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .assigntask-table-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .assigntask-table {
+    min-width: 600px;
+  }
+
+  .assigntask-modal .modal-content {
+    margin: 10px;
   }
 }

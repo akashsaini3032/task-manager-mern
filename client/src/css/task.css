@@ -32,6 +32,7 @@
   background: white;
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
 }
 
 .assigntask-table th {
@@ -117,4 +118,63 @@
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== MOBILE FIRST RESPONSIVE CHANGES ==== */
+@media (max-width: 768px) {
+  .assigntask-wrapper {
+    padding: 20px 15px;
+    border-radius: 12px;
+    margin: 0 10px;
+  }
+
+  .assigntask-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .assigntask-divider {
+    margin-bottom: 20px;
+  }
+
+  .assigntask-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .assigntask-table {
+    min-width: 600px;
+    font-size: 14px;
+    border-collapse: collapse;
+  }
+
+  .assigntask-table th,
+  .assigntask-table td {
+    padding: 8px;
+    white-space: nowrap;
+  }
+
+  .assigntask-modal .modal-content {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .assigntask-form label {
+    font-size: 14px;
+  }
+
+  .assigntask-form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .assigntask-submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
 }
