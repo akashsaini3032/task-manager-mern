@@ -1,0 +1,63 @@
+
+/* #container{
+    padding-top: 20px;
+    padding-bottom: 50px;
+} */
+
+
+
+
+/* Independent, premium CSS for Layout.jsx */
+
+#container {
+  min-height: calc(100vh - 140px); /* Adjusting for header + footer height */
+  padding: 40px 30px;
+  /* background: linear-gradient(145deg, #1a2a38, #223a4a, #2c5364); */
+   background: #FAFAFA;
+  color: #f1f1f1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  animation: fadeIn 0.6s ease;
+  overflow-x: hidden;
+}
+
+/* Make sure body and html take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0f2027;
+}
+
+/* Optional: style links inside container */
+#container a {
+  color: #00ffe7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#container a:hover {
+  color: #00c0aa;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #container {
+    padding: 25px 15px;
+    min-height: calc(100vh - 160px);
+  }
+}

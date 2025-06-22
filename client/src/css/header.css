@@ -1,0 +1,165 @@
+/* HEADER SECTION */
+#header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease;
+}
+
+/* TITLE */
+#header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* TOOLS */
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ICON BUTTONS */
+.icon-btn, .user-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #00eaff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-btn:hover, .user-icon:hover {
+  transform: scale(1.2);
+  color: #0f0;
+}
+
+/* SEARCH */
+.search-input {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.95rem;
+  width: 200px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 10px #00eaff;
+  outline: none;
+}
+
+/* FILTER */
+.filter-select {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: none;
+  background: #1e2b36;
+  color: #00eaff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-select:hover {
+  background: #00eaff;
+  color: #000;
+}
+
+/* MODAL CUSTOM */
+.custom-modal .modal-content {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(0, 234, 255, 0.3);
+  animation: slideDown 0.5s ease;
+  padding: 30px;
+  border: 2px solid #00eaff;
+}
+
+/* FORM STYLING */
+.form-floating {
+  position: relative;
+  margin-bottom: 1.4rem;
+}
+
+.form-floating .form-control {
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.form-floating .form-control:focus {
+  box-shadow: 0 0 10px #00eaff;
+  border-color: #00eaff;
+}
+
+.form-floating label {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  pointer-events: none;
+  color: #777;
+  transition: 0.2s ease;
+}
+
+.form-floating .form-control:focus + label,
+.form-floating .form-control:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 12px;
+  font-size: 0.8rem;
+  background: #fff;
+  padding: 0 4px;
+  color: #00c3ff;
+}
+
+/* FORM FOOTER */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.forgot-link {
+  font-size: 0.9rem;
+  color: #00c3ff;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  color: #0f0;
+}
+
+/* LOGIN BUTTON */
+.login-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #00eaff, #00c3ff);
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background: #0f0;
+  transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

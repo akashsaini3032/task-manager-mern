@@ -1,0 +1,120 @@
+/* Scope sab kuch .assigntask- se start hota hai, 100% independent */
+
+.assigntask-wrapper {
+  background: linear-gradient(to bottom right, #f6f9fc, #edf2f7);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.6s ease-in;
+}
+
+.assigntask-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a202c;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideDown 0.5s ease-in-out;
+}
+
+.assigntask-divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.assigntask-table-wrapper {
+  overflow-x: auto;
+  animation: fadeInUp 0.7s ease;
+}
+
+.assigntask-table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.assigntask-table th {
+  background-color: #2b6cb0;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.assigntask-table td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.assigntask-row:hover {
+  background: #ebf8ff;
+  transition: background 0.3s ease;
+}
+
+.assigntask-btn {
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.1);
+}
+
+.assigntask-btn:hover {
+  transform: scale(1.05);
+  background-color: #3182ce !important;
+  color: white !important;
+  box-shadow: 0 0 12px #90cdf4;
+}
+
+.assigntask-modal .modal-content {
+  border-radius: 16px;
+  animation: fadeInUp 0.6s ease-in-out;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.assigntask-form label {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.assigntask-form input {
+  border-radius: 8px !important;
+  border: 1px solid #cbd5e0 !important;
+  transition: all 0.3s ease;
+}
+
+.assigntask-form input:focus {
+  border-color: #4299e1 !important;
+  box-shadow: 0 0 0 0.2rem rgba(66, 153, 225, 0.25) !important;
+}
+
+.assigntask-submit-btn {
+  background-color: #2b6cb0 !important;
+  border: none !important;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.assigntask-submit-btn:hover {
+  background-color: #2c5282 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

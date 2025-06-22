@@ -1,0 +1,140 @@
+
+
+/* ========================================
+   ADMIN DASHBOARD – PROFESSIONAL STYLES
+   100% INDEPENDENT + MODERN UI/UX
+   Only affects elements with admin-* class
+========================================= */
+
+/* === HEADER === */
+.admin-dashboard-header {
+  background: linear-gradient(to right, #e0f7fa, #fef9c3, #ffe4e6);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: admin-fadeIn 0.5s ease;
+  text-align: center;
+  border: 2px solid #cbd5e1;
+}
+
+.admin-dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  background: linear-gradient(to right, #0ea5e9, #10b981, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === WELCOME BAR === */
+.admin-welcome-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: #f1f5f9;
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  animation: admin-slideIn 0.4s ease;
+}
+
+.admin-welcome-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.admin-logout-link {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.admin-logout-link:hover {
+  background: #ef4444;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+}
+
+/* === LAYOUT === */
+.admin-dashboard-wrapper {
+  display: flex;
+  margin: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* === SIDEBAR === */
+.admin-dashboard-sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #dbeafe, #f0f9ff, #fef3c7);
+  padding: 1.5rem 1rem;
+  border-right: 2px solid #cbd5e1;
+}
+
+.admin-dashboard-link {
+  display: block;
+  background: #e0f2fe;
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 16px;
+  margin-bottom: 1rem;
+  border: 2px solid #93c5fd;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-dashboard-link:hover {
+  background: linear-gradient(to right, #93c5fd, #c7d2fe);
+  color: #111827;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(147, 197, 253, 0.5);
+}
+
+/* === CONTENT === */
+.admin-dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background: #ffffff;
+  animation: admin-fadeIn 0.5s ease;
+  border-left: 2px solid #cbd5e1;
+}
+
+/* === Animations === */
+@keyframes admin-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes admin-slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

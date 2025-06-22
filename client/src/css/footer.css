@@ -1,0 +1,196 @@
+#footer {
+  background: #fefefe;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 15px;
+  border-top: 3px solid #00bcd4;
+  box-shadow: 0 -1px 6px rgba(0, 188, 212, 0.12);
+  user-select: none;
+  text-align: center;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+/* Footer text */
+#footer p, #footer div {
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Social icons container */
+.footer-social .social-icons {
+  margin-top: 12px;
+  display: inline-flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+/* Social icon style */
+.footer-social .social-icons a {
+  font-size: 1.3rem;
+  color: #666;
+  border: 2px solid transparent;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Social icon hover with border glow animation */
+.footer-social .social-icons a:hover {
+  color: #00bcd4;
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px #00bcd4;
+  animation: borderGlow 1.6s infinite alternate ease-in-out;
+}
+
+/* Footer bottom area */
+.footer-bottom {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Back to top button - small and subtle */
+.back-to-top {
+  background: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+/* Border glow animation on hover */
+.back-to-top:hover {
+  background-color: #00bcd4;
+  color: #fff;
+  box-shadow: 0 0 14px #00e5ff;
+  animation: borderGlow 1.3s infinite alternate ease-in-out;
+}
+
+/* Border glow keyframes */
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 6px #00bcd4;
+    border-color: #00bcd4;
+  }
+  100% {
+    box-shadow: 0 0 18px #00e5ff;
+    border-color: #00e5ff;
+  }
+}
+
+/* Smaller heading style if used */
+#footer h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #007f91;
+  border-bottom: 2px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: border-color 0.4s ease;
+}
+
+/* Heading border color on hover */
+#footer h2:hover {
+  border-color: #00e5ff;
+  animation: borderGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Quick links list (if any) */
+.footer-quicklinks ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-quicklinks ul li a {
+  color: #444;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 4px 8px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+/* Quick link hover border glow */
+.footer-quicklinks ul li a:hover {
+  color: #00bcd4;
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px #00bcd4;
+  animation: borderGlow 1.4s infinite alternate ease-in-out;
+}
+
+/* Newsletter input compact */
+.footer-newsletter input[type="email"] {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  border: 2px solid #00bcd4;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px;
+  width: 100%;
+}
+
+/* Input focus */
+.footer-newsletter input[type="email"]:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+/* Newsletter button smaller */
+.footer-newsletter button {
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover glow */
+.footer-newsletter button:hover {
+  background-color: #00e5ff;
+  box-shadow: 0 0 14px #00e5ff;
+  animation: borderGlow 1.2s infinite alternate ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.75rem;
+  }
+
+  .footer-social .social-icons {
+    gap: 12px;
+  }
+}
